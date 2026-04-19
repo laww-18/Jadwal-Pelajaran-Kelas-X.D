@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Pelajaran Kelas X.D</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            padding: 50px 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            padding: 30px;
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+       .judul-utama {
+    /* Gradien Warna */
+    background: linear-gradient(90deg, #b4650a, #e52e71);
+    
+    /* Trik Clip Text (Penyebab utama error jika tidak lengkap) */
+    -webkit-background-clip: text; /* Untuk Chrome, Safari, Edge */
+    background-clip: text;         /* Standar W3C */
+    -webkit-text-fill-color: transparent;
+    
+    /* Tipografi */
+    font-size: clamp(28px, 5vw, 50px); 
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    
+    /* Tambahan: Pastikan display-nya inline-block atau block agar gradien muncul sempurna */
+    display: inline-block;
+}
+        
+
+        .sub-judul {
+            color: #862121;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .garis {
+            width: 60px;
+            height: 4px;
+            background: #e52e71;
+            margin: 0 auto 20px auto;
+            border-radius: 2px;
+        }
+
+        /* Tabel Styles */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            color: #000000;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        th, td {
+            padding: 12px 8px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+        }
+
+        th {
+            background: rgba(180, 101, 10, 0.15);
+            color: #b4650a;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transition: 0.2s;
+        }
+
+        .jam {
+            font-weight: bold;
+            color: #e52e71;
+            background: rgba(255, 255, 255, 0.2);
+            width: 120px;
+        }
+
+        .istirahat {
+            font-style: italic;
+            background: rgba(255, 255, 255, 0.2) !important;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+
+        .kegiatan-pagi {
+            font-weight: 600;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="judul-utama">JADWAL PELAJARAN</h1>
+        <div class="garis"></div>
+        <p class="sub-judul">Kelas X.D</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>JAM</th>
+                        <th>Senin</th>
+                        <th>Selasa</th>
+                        <th>Rabu</th>
+                        <th>Kamis</th>
+                        <th>Jumat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="jam">06:30 - 07:15</td>
+                        <td class="kegiatan-pagi">Upacara</td>
+                        <td>Olahraga</td>
+                        <td>Sejarah</td>
+                        <td>Sosiologi</td>
+                        <td class="kegiatan-pagi">Sholat Duha</td>
+                    </tr>
+                    <tr>
+                        <td class="jam">07:15 - 08.00</td>
+                        <td>Kimia</td>
+                        <td>Olahraga</td>
+                        <td>Sejarah</td>
+                        <td>Sosiologi</td>
+                        <td>Seni Budaya</td>
+                    </tr>
+                    <tr>
+                        <td class="jam">08.00 - 08.45</td>
+                        <td>Kimia</td>
+                        <td>Olahraga</td>
+                        <td>Sejarah</td>
+                        <td>Sosiologi</td>
+                        <td>Seni Budaya</td>
+                    </tr>
+                    <tr>
+                        <td class="jam">08.45 - 09.30</td>
+                        <td>Kimia</td>
+                        <td>Matematika</td>
+                        <td>Geografi</td>
+                        <td>B. Inggris</td>
+                        <td>Matematika</td>
+                    </tr>
+
+                    <tr>
+                        <td class="jam">09.30 - 09.45</td>
+                        <td colspan="5" class="istirahat">ISTIRAHAT</td>
+                    </tr>
+
+                    <tr>
+                        <td class="jam">09.45 - 10.30</td>
+                        <td>Fisika</td>
+                        <td>Matematika</td>
+                        <td>Geografi</td>
+                        <td>B. Inggris</td>
+                        <td>Matematika</td>
+                    </tr>
+                    <tr>
+                        <td class="jam">10.30 - 11.15</td>
+                        <td>Fisika</td> 
+                        <td>B. Indonesia</td>  
+                        <td>Geografi</td>
+                        <td>B. Inggris</td>
+                        <td>B. Sunda</td>
+                    </tr>
+                    <tr>
+                        <td class="jam">11.15 - 12.00</td>
+                        <td>Fisika</td> 
+                        <td>B. Indonesia</td>  
+                        <td>B. Indonesia</td>
+                        <td>Biologi</td>
+                        <td>B. Sunda</td>
+                    </tr>
+
+                    <tr>
+                        <td class="jam">12.00 - 12.45</td>
+                        <td colspan="5" class="istirahat">ISTIRAHAT</td>
+                    </tr>
+
+                    <tr>
+                        <td class="jam">12.45 - 13.30</td>
+                        <td>Ekonomi</td>
+                        <td>Pendidikan Agama</td>
+                        <td>B. Indonesia</td>
+                        <td>Biologi</td>  
+                        <td>PKN</td>
+                    </tr>
+                    <tr>
+                        <td class="jam">13.30 - 14.15</td>
+                        <td>Ekonomi</td>
+                        <td>Pendidikan Agama</td>
+                        <td>TIK</td>
+                        <td>Biologi</td>  
+                        <td>PKN</td>
+                    </tr>
+                    <tr>
+                        <td class="jam">14.15 - 15.00</td>
+                        <td>Ekonomi</td>
+                        <td>Pendidikan Agama</td>
+                        <td>TIK</td>
+                        <td>koding & AI</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
